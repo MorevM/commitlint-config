@@ -1,7 +1,7 @@
 {
 	"name": "@morevm/commitlint-config",
 	"description": "Template repository to start projects with",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"license": "MIT",
 	"publishConfig": {
