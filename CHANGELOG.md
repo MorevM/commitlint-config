@@ -1,3 +1,10 @@
+## [0.0.7](https://github.com/MorevM/commitlint-config/compare/v0.0.6...v0.0.7) (2022-02-05)
+
+
+### Bug Fixes
+
+* Turn off rule `body-full-stop` ([6e7c7c1](https://github.com/MorevM/commitlint-config/commit/6e7c7c1ceda9b6c9a208778750792fc6050f4b13))
+
 ## [0.0.6](https://github.com/MorevM/commitlint-config/compare/v0.0.5...v0.0.6) (2022-02-05)
 
 ## [0.0.5](https://github.com/MorevM/commitlint-config/compare/v0.0.4...v0.0.5) (2022-02-05)
