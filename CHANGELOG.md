@@ -1,3 +1,10 @@
+## [0.0.4](https://github.com/MorevM/commitlint-config/compare/v0.0.3...v0.0.4) (2022-02-05)
+
+
+### Bug Fixes
+
+* Change package name ([4650d9f](https://github.com/MorevM/commitlint-config/commit/4650d9f644cb783745e841144f1a1070086a2d06))
+
 ## [0.0.3](https://github.com/MorevM/commitlint-config/compare/v0.0.2...v0.0.3) (2022-02-05)
 
 ## [0.0.2](https://github.com/MorevM/commitlint-config/compare/v0.0.1...v0.0.2) (2022-02-05)
