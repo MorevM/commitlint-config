@@ -58,7 +58,7 @@ module.exports = {
 		 * Body can be omitted, but if defined, it starts with leading blank line,
 		 * should be written in sentence case and should ends with dot.
 		 */
-		'body-full-stop': [ERROR, 'never', '.'],
+		'body-full-stop': [OFF, 'always', '.'],
 		'body-leading-blank': [ERROR, 'always'],
 		'body-empty': [OFF, 'never'],
 		'body-max-length': [OFF, 'always', Infinity],
