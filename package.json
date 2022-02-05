@@ -44,11 +44,11 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"@commitlint/cli": "^16.1.0",
 		"conventional-changelog-conventionalcommits": "^4.6.3",
 		"lodash.clonedeep": "^4.5.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^16.1.0",
 		"@commitlint/lint": "^16.0.0",
 		"@commitlint/load": "^16.1.0",
 		"@morev/eslint-config": "^3.1.5",
