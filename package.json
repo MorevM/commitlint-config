@@ -1,0 +1,60 @@
+{
+	"name": "@morevm/commitlint-config",
+	"description": "Template repository to start projects with",
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"author": {
+		"name": "Maxim Morev",
+		"email": "max.seainside@gmail.com"
+	},
+	"homepage": "https://github.com/MorevM/commitlint-config#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MorevM/commitlint-config"
+	},
+	"keywords": [],
+	"files": [
+		"build",
+		"src"
+	],
+	"exports": {
+		".": "./build/index.js",
+		"./utils": "./src/utils.js",
+		"./index": "./build/index.js",
+		"./smooth": "./build/smooth.js"
+	},
+	"main": "./build/index.js",
+	"scripts": {
+		"prepare": "husky install ./.husky",
+		"build": "node tools/build",
+		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
+		"release": "release-it --disable-metrics",
+		"lint": "yarn lint:eslint",
+		"lint:fix": "yarn lint:eslint:fix",
+		"lint:eslint": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml}\"",
+		"lint:eslint:fix": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml}\" --fix",
+		"test": "jest"
+	},
+	"dependencies": {
+		"conventional-changelog-conventionalcommits": "^4.6.3",
+		"lodash.clonedeep": "^4.5.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^16.1.0",
+		"@commitlint/lint": "^16.0.0",
+		"@commitlint/load": "^16.1.0",
+		"@morev/eslint-config": "^3.1.5",
+		"@release-it/conventional-changelog": "^4.1.0",
+		"@types/jest": "^27.4.0",
+		"eslint": "^8.7.0",
+		"husky": "^7.0.4",
+		"jest": "^27.5.0",
+		"lint-staged": "^12.3.1",
+		"release-it": "^14.12.4"
+	}
+}
