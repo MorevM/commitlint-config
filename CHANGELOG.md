@@ -1,3 +1,11 @@
+## [0.0.5](https://github.com/MorevM/commitlint-config/compare/v0.0.4...v0.0.5) (2022-02-05)
+
+
+### Bug Fixes
+
+* Add keywords ([fab982b](https://github.com/MorevM/commitlint-config/commit/fab982b28b1096184beb72bb49cf49bac3a0c6b0))
+* Excpicit `registry-url` ([68f62e5](https://github.com/MorevM/commitlint-config/commit/68f62e564e83b31676b25284f283249bb1ff36d9))
+
 ## [0.0.4](https://github.com/MorevM/commitlint-config/compare/v0.0.3...v0.0.4) (2022-02-05)
 
 
