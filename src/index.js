@@ -28,6 +28,7 @@ module.exports = {
 			'revert',
 			'build',
 			'ci',
+			'wip',
 			'nvm',
 		]],
 		'type-case': [ERROR, 'always', 'lower-case'],
