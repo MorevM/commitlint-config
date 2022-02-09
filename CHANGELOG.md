@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/MorevM/commitlint-config/compare/v0.0.7...v0.1.0) (2022-02-09)
+
+
+### Features
+
+* Extend `type-enum` with `wip` type ([3c29286](https://github.com/MorevM/commitlint-config/commit/3c29286b222e48848ad42ecc2d2184735da1b39f))
+
 ## [0.0.7](https://github.com/MorevM/commitlint-config/compare/v0.0.6...v0.0.7) (2022-02-05)
 
 
