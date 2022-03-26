@@ -39,8 +39,8 @@
 		"release": "release-it --disable-metrics",
 		"lint": "yarn lint:eslint",
 		"lint:fix": "yarn lint:eslint:fix",
-		"lint:eslint": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml}\"",
-		"lint:eslint:fix": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml}\" --fix",
+		"lint:eslint": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml,md}\"",
+		"lint:eslint:fix": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml,md}\" --fix",
 		"test": "jest"
 	},
 	"dependencies": {

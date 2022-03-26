@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const { OFF, WARNING, ERROR } = require('./constants');
+const { OFF, WARNING, ERROR } = require('./constants.js');
 
 module.exports = {
 	// For exclamation mark as `breaking change` support

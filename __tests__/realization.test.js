@@ -2,8 +2,8 @@
 /* eslint-disable no-autofix/sonarjs/no-identical-functions */
 const loadConfig = require('@commitlint/load').default;
 const lintMessage = require('@commitlint/lint').default;
-const index = require('../src');
-const { makeSmooth, modifyTypeEnum } = require('../src/utils');
+const index = require('../src/index.js');
+const { makeSmooth, modifyTypeEnum } = require('../src/utils.js');
 
 const getConfig = async (smooth = false) => {
 	return loadConfig(smooth ? makeSmooth(index) : index);

@@ -2,8 +2,8 @@ const { resolve } = require('path');
 const fs = require('fs');
 const util = require('util');
 const { ESLint } = require('eslint');
-const config = require('../src');
-const { makeSmooth } = require('../src/utils');
+const config = require('../src/index.js');
+const { makeSmooth } = require('../src/utils.js');
 
 const eslint = new ESLint({ fix: true });
 

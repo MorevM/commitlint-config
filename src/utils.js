@@ -1,5 +1,5 @@
 const clonedeep = require('lodash.clonedeep');
-const { WARNING, ERROR } = require('./constants');
+const { WARNING, ERROR } = require('./constants.js');
 
 const makeSmooth = (_config) => {
 	const config = clonedeep(_config);
