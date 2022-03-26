@@ -1,4 +1,22 @@
-# [0.1.0](https://github.com/MorevM/commitlint-config/compare/v0.0.7...v0.1.0) (2022-02-09)
+
+
+### [0.1.1](https://github.com/MorevM/commitlint-config/compare/v0.1.0...v0.1.1) (2022-03-26)
+
+
+### CI improvements
+
+* Add `dependabot` ([261b260](https://github.com/MorevM/commitlint-config/commit/261b260b3f428ab22640b510ce69b27578b03d2f))
+
+
+### Chores
+
+* Deps update ([fcc0aab](https://github.com/MorevM/commitlint-config/commit/fcc0aab4a1b2ef4633fdc7bdbbe4018d5531d28c))
+* Update `release-it` config ([ded5b6c](https://github.com/MorevM/commitlint-config/commit/ded5b6c2396dd4eff3c8c7c1dfca2ef916f04882))
+
+
+### Refactoring
+
+* Lint files ([799a848](https://github.com/MorevM/commitlint-config/commit/799a8489695553a7aaba9416afb3256d50f63acb))# [0.1.0](https://github.com/MorevM/commitlint-config/compare/v0.0.7...v0.1.0) (2022-02-09)
 
 
 ### Features
@@ -39,4 +57,3 @@
 * **package.json:** Set `private: false` ([11d5a85](https://github.com/MorevM/commitlint-config/commit/11d5a85958c32607b7a414dec57df3b0e4814b6b))
 
 ## 0.0.1 (2022-02-05)
-
