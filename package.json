@@ -44,7 +44,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@commitlint/cli": "^16.2.3",
+		"@commitlint/cli": "^16.2.4",
 		"conventional-changelog-conventionalcommits": "^4.6.3",
 		"lodash.clonedeep": "^4.5.0"
 	},
