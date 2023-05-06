@@ -3,9 +3,11 @@ const { WARNING, ERROR } = require('./constants.js');
 
 const makeSmooth = (_config) => {
 	const config = deepClone(_config);
+
 	Object.entries(config.rules).forEach(([name, value]) => {
 		if (value[0] === ERROR) value[0] = WARNING;
 	});
+
 	return config;
 };
 
