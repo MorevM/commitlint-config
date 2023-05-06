@@ -1,9 +1,14 @@
-// eslint-disable-next-line import/no-extraneous-dependencies, node/no-extraneous-require -- Defined as a dependency of `@commitlint/cli`
-const { default: rules } = require('@commitlint/rules');
-// eslint-disable-next-line no-unused-vars
-const { OFF, WARNING, ERROR } = require('./constants.js');
+// eslint-disable-next-line import/no-extraneous-dependencies, node/no-extraneous-import -- Defined as a dependency of `@commitlint/cli`
+import _rules from '@commitlint/rules';
 
-module.exports = {
+// eslint-disable-next-line no-unused-vars
+import { OFF, WARNING, ERROR } from './constants.js';
+
+// Only needed to make it work with the default `rollup` auto-interop,
+// which is hard-coded in the `unbuild` package :\
+const rules = _rules.default || _rules;
+
+export default {
 	// For exclamation mark as `breaking change` support
 	parserPreset: 'conventional-changelog-conventionalcommits',
 	// https://commitlint.js.org/#/reference-rules

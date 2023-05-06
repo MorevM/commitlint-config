@@ -1,3 +1,3 @@
-const [OFF, WARNING, ERROR] = [0, 1, 2];
-
-module.exports = { OFF, WARNING, ERROR };
+export const OFF = 0;
+export const WARNING = 1;
+export const ERROR = 2;

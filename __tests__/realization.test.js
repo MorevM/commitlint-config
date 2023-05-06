@@ -1,9 +1,14 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable no-autofix/sonarjs/no-identical-functions */
-const loadConfig = require('@commitlint/load').default;
-const lintMessage = require('@commitlint/lint').default;
-const index = require('../src/index.js');
-const { makeSmooth, modifyTypeEnum } = require('../src/utils.js');
+import _loadConfig from '@commitlint/load';
+import _lintMessage from '@commitlint/lint';
+import index from '../src/index.js';
+import { makeSmooth, modifyTypeEnum } from '../src/utils.js';
+
+// Only needed to make it work with the default `rollup` auto-interop,
+// which is hard-coded in the `unbuild` package :\
+const loadConfig = _loadConfig.default || _loadConfig;
+const lintMessage = _lintMessage.default || _lintMessage;
 
 const getConfig = async (smooth = false) => {
 	return loadConfig(smooth ? makeSmooth(index) : index);

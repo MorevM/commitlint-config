@@ -1,7 +1,7 @@
-const { deepClone } = require('@morev/utils');
-const { WARNING, ERROR } = require('./constants.js');
+import { deepClone } from '@morev/utils';
+import { WARNING, ERROR } from './constants.js';
 
-const makeSmooth = (_config) => {
+export const makeSmooth = (_config) => {
 	const config = deepClone(_config);
 
 	Object.entries(config.rules).forEach(([name, value]) => {
@@ -11,7 +11,7 @@ const makeSmooth = (_config) => {
 	return config;
 };
 
-const modifyTypeEnum = (_config, { add, remove }) => {
+export const modifyTypeEnum = (_config, { add, remove }) => {
 	const config = deepClone(_config);
 
 	if (add && Array.isArray(add) && add.length) {
@@ -24,5 +24,3 @@ const modifyTypeEnum = (_config, { add, remove }) => {
 
 	return config;
 };
-
-module.exports = { makeSmooth, modifyTypeEnum };

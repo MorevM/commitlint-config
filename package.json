@@ -1,6 +1,7 @@
 {
 	"name": "@morev/commitlint-config",
 	"description": "Shareable commitlint configuration",
+	"type": "module",
 	"version": "0.1.1",
 	"private": false,
 	"license": "MIT",
@@ -41,7 +42,7 @@
 		"lint:fix": "yarn lint:eslint:fix",
 		"lint:eslint": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml,md}\"",
 		"lint:eslint:fix": "eslint \"**/*.{js,json,json5,jsonc,yml,yaml,md}\" --fix",
-		"test": "jest"
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
 	},
 	"dependencies": {
 		"@commitlint/cli": "^17.6.3",
