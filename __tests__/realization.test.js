@@ -16,8 +16,12 @@ const modifiedLintFactory = (options) => async (message) => {
 };
 
 const lintFactory = (smooth = false) => async (message, config = null) => {
-	const { rules, parserPreset } = await getConfig(smooth);
-	return lintMessage(message, rules, parserPreset ? { parserOpts: parserPreset.parserOpts } : {});
+	const { rules, parserPreset, plugins } = await getConfig(smooth);
+	return lintMessage(
+		message,
+		rules,
+		parserPreset ? { parserOpts: parserPreset.parserOpts, plugins } : { plugins },
+	);
 };
 
 
@@ -33,6 +37,22 @@ describe('Realization', () => {
 
 		it('Fails with incorrect message', async () => {
 			const result = await lint('fix: remove a crutch');
+
+			expect(result.valid).toBe(false);
+		});
+	});
+
+	describe('Custom plugin to allow single link as a commit body', () => {
+		const lint = lintFactory(false);
+
+		it('Passes using the single link as a commit body', async () => {
+			const result = await lint('feat: Add crutch\n\nhttps://google.com/ ');
+
+			expect(result.valid).toBe(true);
+		});
+
+		it('Falls using not the single link as a commit body', async () => {
+			const result = await lint('feat: Add crutch\n\nhttps://google.com/ description');
 
 			expect(result.valid).toBe(false);
 		});
