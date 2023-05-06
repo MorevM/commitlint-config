@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies, node/no-extraneous-require -- Defined as a dependency of `@commitlint/cli`
+const { default: rules } = require('@commitlint/rules');
 // eslint-disable-next-line no-unused-vars
 const { OFF, WARNING, ERROR } = require('./constants.js');
 
@@ -66,6 +68,8 @@ module.exports = {
 		'body-max-length': [OFF, 'always', Infinity],
 		'body-max-line-length': [OFF, 'always', Infinity],
 		'body-min-length': [OFF, 'always', OFF],
+		// `body-case` is redefined via the local plugin below
+		// to allow a single link as a body.
 		'body-case': [ERROR, 'always', 'sentence-case'],
 
 		/**
@@ -85,4 +89,18 @@ module.exports = {
 		'signed-off-by': [OFF, 'always', 'Signed-off-by:'],
 		'trailer-exists': [OFF, 'always', 'Signed-off-by:'],
 	},
+	plugins: [
+		{
+			rules: {
+				'body-case': (parsed, when, value) => {
+					const originalResult = rules['body-case'](parsed, when, value);
+					// There is no need to do something extra if the original rule is passed.
+					if (originalResult[0] === true) return originalResult;
+					// Detect a single link and modify the output if needed.
+					const onlyLink = /https?:\/\/\S+$/.test((parsed.body || '').trim());
+					return onlyLink ? [true] : [false, `${originalResult[1]} or contain a single link`];
+				},
+			},
+		},
+	],
 };
