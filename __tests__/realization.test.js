@@ -3,15 +3,16 @@
 import _loadConfig from '@commitlint/load';
 import _lintMessage from '@commitlint/lint';
 import index from '../src/index.js';
-import { makeSmooth, modifyTypeEnum } from '../src/utils.js';
+import smooth from '../src/smooth.js';
+import { modifyTypeEnum } from '../src/utils.js';
 
 // Only needed to make it work with the default `rollup` auto-interop,
 // which is hard-coded in the `unbuild` package :\
 const loadConfig = _loadConfig.default || _loadConfig;
 const lintMessage = _lintMessage.default || _lintMessage;
 
-const getConfig = async (smooth = false) => {
-	return loadConfig(smooth ? makeSmooth(index) : index);
+const getConfig = async (isSmooth = false) => {
+	return loadConfig(isSmooth ? smooth : index);
 };
 
 const modifiedLintFactory = (options) => async (message) => {
@@ -20,8 +21,8 @@ const modifiedLintFactory = (options) => async (message) => {
 	return lintMessage(message, rules, parserPreset ? { parserOpts: parserPreset.parserOpts } : {});
 };
 
-const lintFactory = (smooth = false) => async (message, config = null) => {
-	const { rules, parserPreset, plugins } = await getConfig(smooth);
+const lintFactory = (isSmooth = false) => async (message, config = null) => {
+	const { rules, parserPreset, plugins } = await getConfig(isSmooth);
 	return lintMessage(
 		message,
 		rules,
