@@ -31,6 +31,10 @@
 			"import": "./dist/index.mjs",
 			"require": "./dist/index.cjs"
 		},
+		"./smooth": {
+			"import": "./dist/smooth.mjs",
+			"require": "./dist/smooth.cjs"
+		},
 		"./utils": {
 			"import": "./dist/utils.mjs",
 			"require": "./dist/utils.cjs"

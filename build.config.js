@@ -4,6 +4,7 @@ export default {
 	},
 	entries: [
 		'./src/index',
+		'./src/smooth',
 		'./src/utils',
 	],
 	externals: [/@commitlint/],
