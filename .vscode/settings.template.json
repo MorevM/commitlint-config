@@ -11,6 +11,9 @@
 		"html",
 		"vue",
 		"markdown",
-		"yaml"
+		"yaml",
+		"json",
+		"jsonc",
+		"json5"
 	]
 }
