@@ -1,1 +1,0 @@
-'*.{js,vue,json.jsonc,json5,yml,yaml,md}': eslint --fix
