@@ -26,13 +26,13 @@ describe('Realization', () => {
 		const lint = lintFactory(false);
 
 		it('Passes with correct message', async () => {
-			const result = await lint('feat: Add crutch');
+			const result = await lint('feat: Add a crutch');
 
 			expect(result.valid).toBe(true);
 		});
 
 		it('Fails with incorrect message', async () => {
-			const result = await lint('fix: remove crutch');
+			const result = await lint('fix: remove a crutch');
 
 			expect(result.valid).toBe(false);
 		});
@@ -42,21 +42,23 @@ describe('Realization', () => {
 		const lint = lintFactory(true);
 
 		it('Passes with no warnings with correct message', async () => {
-			const result = await lint('feat: Add crutch');
+			const result = await lint('feat: Add a crutch');
 
 			expect(result.valid).toBe(true);
 		});
 
 		it('Passes with incorrect message', async () => {
-			const result = await lint('fix: remove crutch');
+			const result = await lint('fix: remove a crutch');
 
 			expect(result.valid).toBe(true);
 		});
 
 		it('Respect warnings in smooth mode', async () => {
-			const result = await lint('fix: remove crutch');
+			const result = await lint('fix: remove a crutch');
+			const result2 = await lint('fx: remove a crutch');
 
 			expect(result.warnings).toHaveLength(1);
+			expect(result2.warnings).toHaveLength(2);
 		});
 	});
 
@@ -67,13 +69,13 @@ describe('Realization', () => {
 		});
 
 		it('Passes with added custom type', async () => {
-			const result = await lint('custom: Add crutch');
+			const result = await lint('custom: Add a crutch');
 
 			expect(result.valid).toBe(true);
 		});
 
 		it('Fails with removed custom type', async () => {
-			const result = await lint('fix: Fix crutch');
+			const result = await lint('fix: Fix a crutch');
 
 			expect(result.valid).toBe(false);
 		});
