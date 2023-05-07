@@ -1,5 +1,9 @@
 
 
+## [0.2.1](https://github.com/MorevM/commitlint-config/compare/v0.2.0...v0.2.1) (2023-05-07)
+
+Bump for a broken `0.2.0` release.
+
 ## [0.2.0](https://github.com/MorevM/commitlint-config/compare/v0.1.1...v0.2.0) (2023-05-07)
 
 
