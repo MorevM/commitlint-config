@@ -1,5 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable no-autofix/sonarjs/no-identical-functions */
+import { execSync } from 'child_process';
 import _loadConfig from '@commitlint/load';
 import _lintMessage from '@commitlint/lint';
 import index from '../src/index.js';
@@ -30,8 +31,9 @@ const lintFactory = (isSmooth = false) => async (message, config = null) => {
 	);
 };
 
-
 describe('Realization', () => {
+	beforeAll(() => { execSync('yarn build'); });
+
 	describe('Default config', () => {
 		const lint = lintFactory(false);
 
