@@ -2,6 +2,7 @@ export default {
 	rollup: {
 		emitCJS: true,
 	},
+	clean: true,
 	entries: [
 		'./src/index',
 		'./src/smooth',
