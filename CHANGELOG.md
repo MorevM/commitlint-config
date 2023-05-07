@@ -1,5 +1,17 @@
 
 
+## [0.2.2](https://github.com/MorevM/commitlint-config/compare/v0.2.1...v0.2.2) (2023-05-07)
+
+
+### Tests
+
+* Run build task before tests ([5881f32](https://github.com/MorevM/commitlint-config/commit/5881f3226ffd76ef3c3319b8a25732de3b15ee6b))
+
+
+### Chores
+
+* Run build task within `prepare` hook since the local commitlint config depends on the artifacts ([72ff7a7](https://github.com/MorevM/commitlint-config/commit/72ff7a77a66d5f2024a2318f1789de278dec67e3))
+
 ## [0.2.1](https://github.com/MorevM/commitlint-config/compare/v0.2.0...v0.2.1) (2023-05-07)
 
 Bump for a broken `0.2.0` release.
