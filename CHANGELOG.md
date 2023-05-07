@@ -1,5 +1,24 @@
 
 
+## [0.2.0](https://github.com/MorevM/commitlint-config/compare/v0.1.1...v0.2.0) (2023-05-07)
+
+
+### Features
+
+* Add `perf` to the `type-enum` list as less generic subtype of `refactor` ([21df1df](https://github.com/MorevM/commitlint-config/commit/21df1df1a2a1975b0a8499797e4efc20a4b7a9f0))
+* Allow a single link as a commit body using a local plugin ([86a0a49](https://github.com/MorevM/commitlint-config/commit/86a0a49a025b55012646fb3fb6cd3de26bfca87c))
+
+
+### Chores
+
+* Rewrite the package to be ESM ([ae162f7](https://github.com/MorevM/commitlint-config/commit/ae162f7c2609f250c7b03886f1e446cf769d6793))
+* Upgrade direct dependencies ([e886f6b](https://github.com/MorevM/commitlint-config/commit/e886f6b4d447da238b0755b766a9f847b42d7ba9))
+
+
+### Documentation
+
+* Add a proper `README.md` ([99108bb](https://github.com/MorevM/commitlint-config/commit/99108bbf22ecf3e63f39e1f8e4da7545e14c01b9))
+
 ### [0.1.1](https://github.com/MorevM/commitlint-config/compare/v0.1.0...v0.1.1) (2022-03-26)
 
 
