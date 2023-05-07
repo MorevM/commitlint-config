@@ -43,7 +43,7 @@
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
 	"scripts": {
-		"prepare": "lefthook install",
+		"prepare": "lefthook install && unbuild",
 		"build": "unbuild",
 		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
 		"release": "release-it --disable-metrics",
